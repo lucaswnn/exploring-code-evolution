@@ -94,9 +94,15 @@ O gráfico "Function parameters" exibe cinco diferentes séries temporais, desde
 - número de parâmetros com separador de identificadores (keyword_separator);
 - número de parâmetros com tipo esperado (typed_parameter);
 - número de parâmetros com valor padrão e com tipo esperado (typed_default_parameter).
+
 Percebe-se que o número de parâmetros em geral cresce de forma proporcionalmente linear conforme o tempo, o que é de se esperar de uma biblioteca que evolui e se mantém. Além disso, observa-se um crescimento no número de parâmetros com valor padrão proporcional ao número de parâmetros em geral até o ano de 2017, sendo seu crescimento após este ano um pouco mais lento.
+
 De forma curiosa, observa-se o baixo uso dos parâmetros com identificadores obrigatórios e dos parâmetros com tipo esperado (seja com valor padrão ou não). Até o ano de 2020, o uso destes tipos de parâmetro não foi utilizado, apesar de seu baixo uso em relação aos demais tipos atualmente.
+
 Este comportamento do baixo uso de identificadores de tipos é esperado para a linguagem python, por seguir um estilo de tipagem "duck typing". Mesmo com o uso de identificadores de tipos, dependendo do interpretador utilizado, não há a verificação de tipos em tempo de execução, portanto, na maioria dos casos, o identificação dos tipos serve como um auxiliador e um contrato "fraco" para o programador que utiliza funções com estes identificadores.
+
 Apesar disso, é uma boa prática a utilização de tipos explícitos: para o desenvolvedor da própria biblioteca, é importante para evitar imprevisibilidade. Para o desenvolvedor que utiliza a biblioteca, garante que ele esteja ciente das estruturas de dados a serem utilizadas e que utilizar tipos diferentes pode ocasionar comportamento indefinido.
+
 Com o crescimento da biblioteca, provavelmente os desenvolvedores sentiram a necessidade de introduzir o uso de identificadores de tipos, tendo um salto expressivo no ano de 2026 em relação aos anos anteriores. Uma hipótese deste salto pode ser a utilização de tipos internos da biblioteca para auxiliar a evolução da própria biblioteca, pois não faria sentido criar novas interfaces (funções e métodos) com identificadores de tipo para o desenvolvedor que utiliza a biblioteca, visto que já existem diversas interfaces sem tipagem explícita.
+
 Com base no gráfico "Functions and classes", observa-se que foram contabilizadas 11.202 funções no ano de 2026. Com base nisso e no gráfico estudado, cujos dados revelam que a contagem de parâmetros em geral é de 16.585 no ano de 2026, estimam-se em média 1,48 parâmetros por função. De forma geral, as funções aparentam seguir uma boa prática para evitar funções com muitos parâmetros.
